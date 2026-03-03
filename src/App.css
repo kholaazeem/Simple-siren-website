@@ -1,0 +1,167 @@
+
+      
+
+          .fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+          }
+
+          @keyframes fadeInUp {
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          /* Mobile phone ke float karne ki animation */
+          .floating-phone {
+            animation: float 4s ease-in-out infinite;
+            /* Phone ke peechay ek soft shadow taake 3D feel aaye */
+            filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.1)); 
+          }
+
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+          }
+  
+
+
+          /* Bento Grid Cards */
+.bento-card {
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effect: Yellow Shadow & Float */
+.bento-card:hover {
+  transform: translateY(-5px);
+  /* Yehi wo yellow shadow hai jo aapko chahiye tha */
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15); 
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+/* Yellow Icon Box */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  background-color: #FFFDF0; /* Bohot soft yellow background */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #FFD700; /* Primary Yellow */
+}
+
+/* --- Footer Wave Animation --- */
+.wave-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60px; /* Wave ki height */
+  overflow: hidden;
+  background-color: transparent; 
+  line-height: 0;
+  margin-bottom: -1px; /* Gap hatane ke liye */
+}
+
+.animated-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* Double width taake loop seamless ho */
+  height: 100%;
+  display: flex;
+  animation: waveLoop 15s linear infinite; /* 15s speed hai, kam zyada kar sakti hain */
+}
+
+.wave-svg {
+  width: 50%; /* Har wave half width legi */
+  height: 100%;
+}
+
+/* Ye keyframe wave ko continuously left slide karega */
+@keyframes waveLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Footer Link Hover Effect */
+.footer-link {
+  color: #E2E8F0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: #FFD700; /* Hover par yellow ho jayega */
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Blog Page Cards --- */
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none; /* Link ki underline hatane ke liye */
+  display: block;
+}
+
+/* 1. Card Glow on Hover */
+.blog-card:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.12); /* Yellow Shadow */
+  transform: translateY(-3px); /* Thora sa upar uthega */
+}
+
+/* Blog Title Transition */
+.blog-title {
+  color: #212529; /* Dark Gray */
+  transition: color 0.3s ease;
+}
+
+/* 2. Title Color Change on Hover */
+.blog-card:hover .blog-title {
+  color: #FFD700; /* Yellow */
+}
+
+/* Arrow Button Transition */
+.blog-arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #F8F9FA; /* Light grey */
+  color: #A0AEC0; /* Grey icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* 3. Arrow Change on Hover */
+.blog-card:hover .blog-arrow {
+  background-color: #FFFDF0; /* Light yellow background */
+  color: #FFD700; /* Yellow icon */
+}
+
+/* Category Yellow Badge */
+.blog-badge {
+  background-color: #FFFDF0; /* Light Yellow */
+  color: #FFD700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
